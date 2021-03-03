@@ -1,12 +1,10 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include <stdio.h>
 #include <cstdio>
 #include <stdlib.h>
 #include <locale>
 #include <stdbool.h>
 
-void Error() {
+void Error() {				//можно убрать
 	printf("Ошибка ввода.\n");
 	exit(EXIT_FAILURE);
 }
@@ -15,6 +13,16 @@ int IntInput() {
 	int a;
 	if (scanf("%d", &a) != 1) Error();
 	return a;
+}
+
+int countLocalMin(double *a, int n) {
+	for (int i = 1; i < n; i++) {
+		if (localmin(a[i], a[i + 1], a[i + 1 + 1])) {
+			int count;
+			count++;
+		}
+	}
+	return count;
 }
 
 void ArrayInput(double *array, int n) {
@@ -29,16 +37,6 @@ bool countLocalMin(double x, double b, double c) {
 		return true;
 	}
 	return false;
-}
-
-int countLocalMin(double *a, int n) {
-	for (int i = 1; i < n; i++) {
-		if (localmin(a[i], a[i + 1], a[i + 1 + 1])) {
-			int count;
-			count++;
-		}
-	}
-	return count;
 }
 
 int main() {
