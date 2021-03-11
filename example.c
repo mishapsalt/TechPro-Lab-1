@@ -4,7 +4,7 @@
 #include <locale>
 #include <stdbool.h>
 
-void Error() {				//можно убрать
+void Error() {				//можно убратьdskjfksdklfgaklhgfakhslda
 	printf("Ошибка ввода.\n");
 	exit(EXIT_FAILURE);
 }
